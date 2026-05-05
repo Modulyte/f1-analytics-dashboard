@@ -28,7 +28,6 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 const BUCKET_COLORS = ['#00c9a7', '#4ade80', '#f59e0b', '#fb923c', '#ef4444', '#dc2626']
 
 // ── Waterfall data ───────────────────────────────────────────────────────────
-type WFEntry = { name: string; start: number; end: number; value: number; type: 'total'|'pos'|'neg' }
 
 const rawWaterfall = [
   { name: 'Opening',      value: 4_500_000_000,  type: 'total' as const },

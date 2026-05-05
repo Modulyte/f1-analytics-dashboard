@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BarChart, Bar, LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, Legend } from 'recharts'
+import { BarChart, Bar, Line, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, Legend } from 'recharts'
 import ChartCard from '../components/ChartCard'
 import { agentPerformance, ptpOutcomes, agentMonthlyRankings, agentNames, agentColors } from '../data/creditData'
 

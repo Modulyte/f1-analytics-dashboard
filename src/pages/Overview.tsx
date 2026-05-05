@@ -109,7 +109,7 @@ export default function Overview() {
               <Pie data={portfolioSegments} cx="50%" cy="50%" innerRadius={55} outerRadius={80} paddingAngle={3} dataKey="value">
                 {portfolioSegments.map((_, i) => <Cell key={i} fill={PIE_COLORS[i % PIE_COLORS.length]} />)}
               </Pie>
-              <Tooltip formatter={(v: number) => `${v}%`}
+              <Tooltip formatter={(v: any) => `${v}%`}
                 contentStyle={{ background: 'rgba(22,25,34,0.9)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 8, fontSize: 11 }} />
               <Legend wrapperStyle={{ fontSize: 10 }} iconType="circle" />
             </PieChart>

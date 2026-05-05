@@ -1,7 +1,7 @@
 import {
   RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Legend,
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Treemap
+  Treemap
 } from 'recharts'
 import ChartCard from '../components/ChartCard'
 import { portfolioSegments, riskHeatmap } from '../data/creditData'
@@ -27,17 +27,6 @@ const treemapData = [
   { name: 'Overdrafts', size: 6.6, fill: '#8b5cf6' },
 ]
 
-const CustomTooltip = ({ active, payload, label }: any) => {
-  if (!active || !payload?.length) return null
-  return (
-    <div className="rounded-lg border border-border bg-card px-3 py-2 shadow-xl text-xs">
-      <p className="text-text-secondary mb-1 font-medium">{label}</p>
-      {payload.map((p: any) => (
-        <p key={p.name} style={{ color: p.color ?? '#f0f2f8' }}>{p.name}: <span className="font-bold">{p.value}</span></p>
-      ))}
-    </div>
-  )
-}
 
 const CustomTreemapContent = (props: any) => {
   const { x, y, width, height, name, size, fill } = props
@@ -81,7 +70,7 @@ export default function Portfolio() {
                 ))}
               </Pie>
               <Tooltip
-                formatter={(v: number) => `${v}%`}
+                formatter={(v: any) => `${v}%`}
                 contentStyle={{ background: '#161922', border: '1px solid #242836', borderRadius: 8, fontSize: 11 }}
               />
             </PieChart>
