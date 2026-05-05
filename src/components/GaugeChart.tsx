@@ -62,7 +62,7 @@ export default function GaugeChart({ value, label = 'Portfolio Health', sublabel
         {/* Background track */}
         <path
           d={arcPath(cx, cy, outerR, 0, 100)}
-          fill="none" stroke="#242836" strokeWidth={innerR === outerR ? 1 : outerR - innerR}
+          fill="none" stroke="#242836" strokeWidth={outerR - innerR}
           strokeLinecap="round"
         />
         {/* Coloured value arc */}
