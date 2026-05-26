@@ -134,7 +134,7 @@ export default function RiskScoring() {
           yLabel="Credit Score"
           yFmt={v => Math.round(v).toString()}
         />
-        <div className="grid grid-cols-2 gap-4 mt-4 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
           {scoreOriginVsDefault.map((d, i) => (
             <div key={d.group} className="glass rounded-lg p-3 text-xs space-y-1">
               <p className="font-semibold" style={{ color: i === 0 ? '#00c9a7' : '#ef4444' }}>{d.group}</p>
@@ -197,7 +197,7 @@ export default function RiskScoring() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {[['Avg Score','648'],['Median','671'],['Std Dev','±112'],['Min','300'],['Max','887'],['Mode Range','651–700']].map(([l,v]) => (
               <div key={l} className="glass rounded-lg p-2.5 text-center">
                 <p className="text-sm font-bold text-accent">{v}</p>

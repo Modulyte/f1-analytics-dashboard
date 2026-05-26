@@ -12,19 +12,19 @@ export default function App() {
   return (
     <div className="flex min-h-screen bg-background text-text-primary relative">
 
-      {/* ── Background gradient orbs (give glassmorphism something to blur) ── */}
-      <div className="bg-orb w-[700px] h-[700px] top-[-15%] left-[8%]"
+      {/* Background gradient orbs — hidden on mobile to avoid overflow */}
+      <div className="bg-orb hidden sm:block w-[700px] h-[700px] top-[-15%] left-[8%]"
         style={{ background: 'radial-gradient(circle, rgba(0,201,167,0.09) 0%, transparent 70%)' }} />
-      <div className="bg-orb w-[600px] h-[600px] bottom-[-10%] right-[5%]"
+      <div className="bg-orb hidden sm:block w-[600px] h-[600px] bottom-[-10%] right-[5%]"
         style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%)' }} />
-      <div className="bg-orb w-[400px] h-[400px] top-[40%] left-[40%]"
+      <div className="bg-orb hidden sm:block w-[400px] h-[400px] top-[40%] left-[40%]"
         style={{ background: 'radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 70%)' }} />
 
       <Sidebar />
 
-      {/* ── Main content — offset by sidebar width ── */}
-      <main className="flex-1 ml-56 min-h-screen relative z-10">
-        <div className="max-w-7xl mx-auto px-6 py-8">
+      {/* Main content — offset by sidebar on md+, top padding on mobile for hamburger */}
+      <main className="flex-1 md:ml-56 min-h-screen relative z-10">
+        <div className="max-w-7xl mx-auto px-3 md:px-6 pt-16 pb-6 md:py-8">
           <Routes>
             <Route path="/"            element={<Overview />} />
             <Route path="/delinquency" element={<Delinquency />} />

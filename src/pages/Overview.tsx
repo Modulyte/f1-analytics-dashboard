@@ -35,12 +35,12 @@ export default function Overview() {
       </div>
 
       {/* Top row: Gauge + KPIs */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Gauge hero card */}
         <ChartCard
           title="Health Score"
           subtitle="Weighted portfolio health"
-          className="row-span-2"
+          className="col-span-2 lg:col-span-1 lg:row-span-2"
         >
           <GaugeChart
             value={68}
@@ -78,8 +78,8 @@ export default function Overview() {
       </div>
 
       {/* Charts row */}
-      <div className="grid grid-cols-3 gap-4">
-        <ChartCard title="Delinquency Trend" subtitle="NPL vs delinquent — 12 months" className="col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <ChartCard title="Delinquency Trend" subtitle="NPL vs delinquent — 12 months" className="lg:col-span-2">
           <ResponsiveContainer width="100%" height={220}>
             <AreaChart data={delinquencyTrend} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
               <defs>
@@ -118,7 +118,7 @@ export default function Overview() {
       </div>
 
       {/* Bottom row */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <ChartCard title="Cash Flow" subtitle="Monthly inflow vs outflow">
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={cashFlow} barGap={4} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>

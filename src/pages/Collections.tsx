@@ -133,7 +133,7 @@ export default function Collections() {
               )
             })}
           </div>
-          <div className="grid grid-cols-3 gap-3 mt-4 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+          <div className="grid grid-cols-3 gap-2 mt-4 pt-4" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
             {[['Contact Rate','61%'],['RPC Rate','40%'],['PTP Rate','25%']].map(([l,v]) => (
               <div key={l} className="text-center">
                 <p className="text-lg font-bold text-accent">{v}</p>
